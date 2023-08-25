@@ -20,12 +20,15 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const Token = await ethers.getContractFactory("GigacountsToken");
-  const token = await Token.deploy();
-  await token.deployed();
+  const ContractHandler = await ethers.getContractFactory("GigacountsContractHandlerV5");
+  const contractHandler = await ContractHandler.deploy();
+  await contractHandler.deployed();
+  console.log("Gigacounts Contract Handler address:", contractHandler.address);
 
-  console.log("Token address:", token.address);
-
+  const ProxyContract = await ethers.getContractFactory("GigacountsContractHandlerProxy");
+  const proxyContract = await ProxyContract.deploy(contractHandler.address);
+  await proxyContract.deployed();
+  console.log("Gigacounts Contract Handler Proxy address:", proxyContract.address);
 }
 
 main()
