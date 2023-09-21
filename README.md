@@ -50,6 +50,7 @@ INFURA_ID={your infura project id}
 ALCHEMY_ID={your infura api key}
 PUBLIC_ADDRESS={your wallet address}
 PRIVATE_KEY={your private key to deploy SCs}
+DEPLOYED_GIGACOUNTS_CONTRACT_ADDRESS={the address where contract ERC20 is deploy, just to use in scripts/interact.ts}
 ```
 
 > Note: You can find more info about the other required `.env` variables inside the `example_env` file.
@@ -80,16 +81,3 @@ solhint 'contracts/**/*.sol'
 # Solidity Static Analysis [https://github.com/crytic/slither]
 slither .
 ```
-
-## Deployment 
-
-When deploying the handler contract: 
-
-- Update the 'env' variables in both the frontend and backend with new SC address.
-- Update the ABI code of the handler to both the frontend and backend.
-- Add the user scheduler's wallet as an owner. 
-- Add the user admin's wallet as an owner. 
-- Call the 'addSupportedToken' function with the address of the GIGA ERC20 Token. 
-- Increase the allowance in the ERC20 Token contract for the handler's address.
-
-
