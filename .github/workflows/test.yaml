@@ -18,6 +18,6 @@ jobs:
       - name: Compile contracts
         run: npx hardhat compile
       - name: Test deploy harhat
-        run:  npx hardhat node & npx hardhat run --network hardhat scripts/deploy.ts
+        run:  npx hardhat node & npx hardhat run --network hardhat scripts/deployAllWithMock.ts
       - name: Run tests
         run: npx hardhat test
