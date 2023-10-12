@@ -4,7 +4,7 @@ const { ethers } = require("hardhat");
 describe('GigacountsHandler Unit Tests', function () {
   before(async function () {
     this.GigacountsToken = await ethers.getContractFactory('GigacountsToken');
-    this.GigacountsContractHandler = await ethers.getContractFactory('GigacountsContractHandlerV4');
+    this.GigacountsContractHandler = await ethers.getContractFactory('GigacountsContractHandler');
     this.GigacountsContractHandlerProxy = await ethers.getContractFactory('GigacountsContractHandlerProxy');
   });
 

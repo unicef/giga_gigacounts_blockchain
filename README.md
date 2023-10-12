@@ -85,7 +85,7 @@ slither .
 
 When deploying the handler contract: 
 
-- Update the 'env' variables in both the frontend and backend with new SC address.
+- Update the handler contract address in settings table in database.
 - Update the ABI code of the handler to both the frontend and backend.
 - Add the user scheduler's wallet as an owner. 
 - Add the user admin's wallet as an owner. 
@@ -93,3 +93,7 @@ When deploying the handler contract:
 - Increase the allowance in the ERC20 Token contract for the handler's address.
 
 
+## TODO (Improvements)
+
+- Separate data logic into two smart contracts.
+- Maintain history of smart contract implementations (logic and data) to have the physical contract + SC relationship (due to changes in the ABI).

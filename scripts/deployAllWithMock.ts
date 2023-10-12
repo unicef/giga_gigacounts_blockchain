@@ -27,7 +27,7 @@ async function main() {
   console.log("Gigacounts Token address:", token.address);
 
   // deploy handler
-  const ContractHandler = await ethers.getContractFactory("GigacountsContractHandlerV5");
+  const ContractHandler = await ethers.getContractFactory("GigacountsContractHandlerV6");
   const contractHandler = await ContractHandler.deploy();
   await contractHandler.deployed();
   console.log("Gigacounts Contract Handler address:", contractHandler.address);
