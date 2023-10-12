@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract GigacountsContractHandlerV6 {
+contract GigacountsContractHandler {
     address public owner;
     mapping(address => bool) public owners;
     uint8 totalSupportedTokens;
@@ -59,6 +59,7 @@ contract GigacountsContractHandlerV6 {
         checkHowCandSendFunds = false;
         checkHowCanReceiveFunds = false;
         totalSupportedTokens = 0;
+	locked = false;
     }
 
     modifier onlyOwner() {

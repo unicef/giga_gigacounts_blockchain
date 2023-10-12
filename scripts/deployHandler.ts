@@ -20,7 +20,7 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const ContractHandler = await ethers.getContractFactory("GigacountsContractHandlerV5");
+  const ContractHandler = await ethers.getContractFactory("GigacountsContractHandlerV6");
   const contractHandler = await ContractHandler.deploy();
   await contractHandler.deployed();
   console.log("Gigacounts Contract Handler address:", contractHandler.address);

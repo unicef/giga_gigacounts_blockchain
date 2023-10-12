@@ -14,8 +14,8 @@ async function main() {
     const tokenDecimals = await token.decimals();
 
     console.log('Getting the Gigacounts handler contract...');
-    const Handler = await ethers.getContractFactory('GigacountsContractHandlerV5');
-    const handler = await Handler.deploy(Handler)
+    const Handler = await ethers.getContractFactory('GigacountsContractHandlerV6');
+    const handler = await Handler.deploy()
 
     console.log('Getting Signers...');
     const signers = await ethers.getSigners();
@@ -23,6 +23,13 @@ async function main() {
     
     console.log('Adding supported token...');
     await handler.connect(owner).addSupportedToken(token.address, tokenSymbol, tokenDecimals);
+
+    console.log('Adding owner...')
+    await handler.connect(owner).addOwner('0x4Be90B1A5476dadc3642bE8F5de779734A4A3149');
+    await handler.connect(owner).addOwner('0x7373504D50aDA578FD4bD868Aea63B0eFfe1aF32');
+    
+    console.log('Increasing allowance for handler...')
+    await token.connect(owner).increaseAllowance (handler.address, '90000000000000000000000000')
 
 }
 
