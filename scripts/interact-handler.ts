@@ -14,7 +14,7 @@ async function main() {
     const tokenDecimals = await token.decimals();
 
     console.log('Getting the Gigacounts handler contract...');
-    const Handler = await ethers.getContractFactory('GigacountsContractHandlerV6');
+    const Handler = await ethers.getContractFactory('GigacountsContractHandler');
     const handler = await Handler.deploy()
 
     console.log('Getting Signers...');
