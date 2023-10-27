@@ -93,6 +93,11 @@ When deploying the handler contract:
 - Increase the allowance in the ERC20 Token contract for the handler's address.
 
 
+## Development Smart Contracts Addresses
+
+- Gigacounts Token Address: 0xba5e2af09e39cc36dfbc9530c4d4c89d5c44d323
+- Handler Token Address: 0xd947466553cE6B133D7f3910C9a0c3Cd9837ED3F
+
 ## TODO (Improvements)
 
 - Separate data logic into two smart contracts.
