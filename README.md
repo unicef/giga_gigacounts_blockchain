@@ -95,8 +95,8 @@ When deploying the handler contract:
 
 ## Development Smart Contracts Addresses
 
-- Gigacounts Token Address: 0xba5e2af09e39cc36dfbc9530c4d4c89d5c44d323
-- Handler Token Address: 0xd947466553cE6B133D7f3910C9a0c3Cd9837ED3F
+- Gigacounts Token Address: 0x5c9b946cCc153db707C4D72C15338122FBf830bf
+- Handler Token Address: 0x75F3DdDC86905c2e202DD2c9260B341D0be5aa9C
 
 ## TODO (Improvements)
 
