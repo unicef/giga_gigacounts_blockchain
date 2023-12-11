@@ -59,7 +59,7 @@ contract GigacountsContractHandler {
         checkHowCandSendFunds = false;
         checkHowCanReceiveFunds = false;
         totalSupportedTokens = 0;
-	locked = false;
+        locked = false;
     }
 
     modifier onlyOwner() {
